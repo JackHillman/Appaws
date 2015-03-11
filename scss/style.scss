@@ -1,0 +1,140 @@
+@import "compass/reset";
+@import "compass";
+@import "variables";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400);
+
+// Document
+
+html {
+	background-color: $white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+// Header
+
+header {
+	width: $content;
+	margin: 0 auto;
+	background-color: inherit;
+	height: $headerHeight;
+
+	.logo {
+		color: $darkBlue;
+		float: left;
+		clear: none;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 2.2em;
+		letter-spacing: 5px;
+		line-height: $headerHeight;
+
+		span {
+			color: $darkGrey;
+		}
+
+		a {
+			text-decoration: none;
+			color: $mediumBlue;
+		}
+
+	}
+
+	.nav {
+		float: right;
+		clear: none;
+		height: $headerHeight;
+		font-weight: 300;
+		font-size: 2em;
+
+		li {
+			display: inline-block;
+			padding: 0 10px 0 10px;
+			line-height: $headerHeight;
+			
+			a {
+				color: $darkGrey;
+				text-decoration: none;
+				@include transition(all 0.2s);
+
+				&:hover {
+					color: $mediumBlue;
+				}
+			}
+			
+			&:first-child {
+				padding: 0 10px 0 0;
+			}
+
+			&:last-child {
+				padding: 0 0 0 10px;
+
+				&::after {
+					content: "";
+				}
+			}
+
+			&::after {
+				content: "-";
+				position: absolute;
+				color: $lightGreen;
+				@include text-shadow(0 1px $lightGreen/0.2);
+				margin: -1px 0 0 8px;
+			}
+		}
+	}
+}
+
+// Cover
+
+.cover {
+	width: 1500px;
+	height: 700px;
+	margin: 0 auto;
+	background-image: url(../images/header.jpg);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	a {
+		text-decoration: none;
+	}
+
+	.headline {
+		font-size: 3.5em;
+		font-weight: 300;
+		color: $black;
+		width: 700px;
+		padding: 10px 20px 20px;
+		margin: 0 0 40px;
+		position: static;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 0.6);
+		@include animation-name(pulse);
+		@include animation-duration(1s);
+		@include animation-iteration-count(infinite);
+		@include opacity(0.9);
+		@include box-shadow(1px 1px 0 $black, 2px 2px 0 $black, 3px 3px 0 $black, 4px 4px 0 $black, 5px 5px 0 $black, 6px 6px 0 $black, 7px 7px 0 $black, 8px 8px 0 $black, inset 3px 3px 0 $black, inset 3px -3px 0 $black, inset -3px 3px 0 $black, inset -3px -3px 0 $black, inset 3px -3px 0 $black);
+
+		&:hover {
+			@include opacity(1);
+			background-color: rgba(255, 255, 255, 0.8);
+			@include animation(none);
+		}
+
+		&:active {
+			margin: 0 0 32px 15px;
+			@include box-shadow(inset 3px 3px 0 $black, inset 3px -3px 0 $black, inset -3px 3px 0 $black, inset -3px -3px 0 $black, inset 3px -3px 0 $black);
+		}
+	}
+
+	// Animation
+
+	@include keyframes(pulse) {
+		0%, 100% {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		50% {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+	}
+}

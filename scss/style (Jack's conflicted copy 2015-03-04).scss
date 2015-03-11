@@ -1,0 +1,90 @@
+@import "compass/reset";
+@import "compass";
+@import "variables";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+// Document
+
+html {
+	background-color: $white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+// Header
+
+header {
+	width: $content;
+	margin: 0 auto;
+	background-color: inherit;
+	height: $headerHeight;
+
+	.logo {
+		float: left;
+		clear: none;
+	}
+
+	.nav {
+		float: right;
+		clear: none;
+		height: $headerHeight;
+		font-weight: 300;
+		font-size: 2em;
+
+		li {
+			display: inline-block;
+			padding: 0 10px 0 10px;
+			line-height: $headerHeight;
+			
+			a {
+				color: $darkGrey;
+				text-decoration: none;
+				@include transition(all 0.2s);
+
+				&:hover {
+					color: $darkBlue;
+				}
+			}
+			
+			&:first-child {
+				padding: 0 10px 0 0;
+			}
+
+			&:last-child {
+				padding: 0 0 0 10px;
+
+				&::after {
+					content: "";
+				}
+			}
+
+			&::after {
+				content: "-";
+				position: absolute;
+				color: $lightGreen;
+				@include text-shadow(0 1px $lightGreen/0.2);
+				margin: -1px 0 0 8px;
+			}
+		}
+	}
+}
+
+// Cover
+
+.cover {
+	width: 1500px;
+	height: 700px;
+	margin: 0 auto;
+	background-image: url(../images/header.jpg);
+	display: flex;
+	justify-content: center;
+
+	.headline {
+		font-size: 3em;
+		font-weight: 300;
+		color: $white;
+		padding: 40px;
+		margin: 40px auto;
+		position: static;
+		text-align: center;
+	}
+}

@@ -1,0 +1,227 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400);
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../scss/style.scss */
+html {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 16, ../scss/style.scss */
+header {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: inherit;
+  height: 150px;
+}
+/* line 22, ../scss/style.scss */
+header .logo {
+  color: #193441;
+  float: left;
+  clear: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.2em;
+  letter-spacing: 5px;
+  line-height: 150px;
+}
+/* line 31, ../scss/style.scss */
+header .logo span {
+  color: #889;
+}
+/* line 35, ../scss/style.scss */
+header .logo a {
+  text-decoration: none;
+  color: #3E606F;
+}
+/* line 42, ../scss/style.scss */
+header .nav {
+  float: right;
+  clear: none;
+  height: 150px;
+  font-weight: 300;
+  font-size: 2em;
+}
+/* line 49, ../scss/style.scss */
+header .nav li {
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  line-height: 150px;
+}
+/* line 54, ../scss/style.scss */
+header .nav li a {
+  color: #889;
+  text-decoration: none;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/* line 59, ../scss/style.scss */
+header .nav li a:hover {
+  color: #3E606F;
+}
+/* line 64, ../scss/style.scss */
+header .nav li:first-child {
+  padding: 0 10px 0 0;
+}
+/* line 68, ../scss/style.scss */
+header .nav li:last-child {
+  padding: 0 0 0 10px;
+}
+/* line 71, ../scss/style.scss */
+header .nav li:last-child::after {
+  content: "";
+}
+/* line 76, ../scss/style.scss */
+header .nav li::after {
+  content: "-";
+  position: absolute;
+  color: #D1DBBD;
+  text-shadow: 0 1px white;
+  margin: -1px 0 0 8px;
+}
+
+/* line 89, ../scss/style.scss */
+.cover {
+  width: 1500px;
+  height: 700px;
+  margin: 0 auto;
+  background-image: url(../images/header.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+/* line 98, ../scss/style.scss */
+.cover a {
+  text-decoration: none;
+}
+/* line 102, ../scss/style.scss */
+.cover .headline {
+  font-size: 3.5em;
+  font-weight: 300;
+  color: #193441;
+  width: 700px;
+  padding: 10px 20px 20px;
+  margin: 0 0 40px;
+  position: static;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  -moz-animation-name: pulse;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  -moz-box-shadow: 1px 1px 0 #193441, 2px 2px 0 #193441, 3px 3px 0 #193441, 4px 4px 0 #193441, 5px 5px 0 #193441, 6px 6px 0 #193441, 7px 7px 0 #193441, 8px 8px 0 #193441, inset 3px 3px 0 #193441, inset 3px -3px 0 #193441, inset -3px 3px 0 #193441, inset -3px -3px 0 #193441, inset 3px -3px 0 #193441;
+  -webkit-box-shadow: 1px 1px 0 #193441, 2px 2px 0 #193441, 3px 3px 0 #193441, 4px 4px 0 #193441, 5px 5px 0 #193441, 6px 6px 0 #193441, 7px 7px 0 #193441, 8px 8px 0 #193441, inset 3px 3px 0 #193441, inset 3px -3px 0 #193441, inset -3px 3px 0 #193441, inset -3px -3px 0 #193441, inset 3px -3px 0 #193441;
+  box-shadow: 1px 1px 0 #193441, 2px 2px 0 #193441, 3px 3px 0 #193441, 4px 4px 0 #193441, 5px 5px 0 #193441, 6px 6px 0 #193441, 7px 7px 0 #193441, 8px 8px 0 #193441, inset 3px 3px 0 #193441, inset 3px -3px 0 #193441, inset -3px 3px 0 #193441, inset -3px -3px 0 #193441, inset 3px -3px 0 #193441;
+}
+/* line 118, ../scss/style.scss */
+.cover .headline:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  -moz-animation: none;
+  -webkit-animation: none;
+  animation: none;
+}
+/* line 124, ../scss/style.scss */
+.cover .headline:active {
+  margin: 0 0 32px 15px;
+  -moz-box-shadow: inset 3px 3px 0 #193441, inset 3px -3px 0 #193441, inset -3px 3px 0 #193441, inset -3px -3px 0 #193441, inset 3px -3px 0 #193441;
+  -webkit-box-shadow: inset 3px 3px 0 #193441, inset 3px -3px 0 #193441, inset -3px 3px 0 #193441, inset -3px -3px 0 #193441, inset 3px -3px 0 #193441;
+  box-shadow: inset 3px 3px 0 #193441, inset 3px -3px 0 #193441, inset -3px 3px 0 #193441, inset -3px -3px 0 #193441, inset 3px -3px 0 #193441;
+}
+@-moz-keyframes pulse {
+  0%, 100% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@-webkit-keyframes pulse {
+  0%, 100% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
